@@ -1,0 +1,22 @@
+curl --request POST \
+     --url 'https://general-runtime.voiceflow.com/state/user/userID/interact?logs=off' \
+     --header 'Authorization: VF.DM.65e7987cb17a43ed600b4327.kjoLe2GveOu4lRD2' \
+     --header 'accept: application/json' \
+     --header 'content-type: application/json' \
+     --data '
+{
+  "action": {
+    "type": "launch"
+  },
+  "config": {
+    "tts": false,
+    "stripSSML": true,
+    "stopAll": true,
+    "excludeTypes": [
+      "block",
+      "debug",
+      "flow"
+    ]
+  }
+}
+'
